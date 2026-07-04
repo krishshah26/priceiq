@@ -15,6 +15,7 @@
 # .streamlit/secrets.toml.example for setup, and the README for how to
 # configure the same secret on Streamlit Community Cloud.
 
+import html
 import json
 import os
 
@@ -85,6 +86,9 @@ hr.divider { border: none; border-top: 1px solid #e1e0d9; margin: 3rem 0; }
     font-size: 1.02rem;
     line-height: 1.6;
     margin-top: 0.8rem;
+}
+.chat-answer p { margin: 0 0 0.9rem 0; }
+.chat-answer p:last-child { margin-bottom: 0;
 }
 .footer-note { text-align: center; color: #898781; font-size: 0.9rem; padding: 1rem 0 0.5rem 0; }
 .footer-note a { color: #2a78d6; text-decoration: none; }
@@ -439,6 +443,13 @@ def is_safe_select(sql):
     return lowered.startswith("select") and not any(w in lowered for w in FORBIDDEN_SQL_WORDS)
 
 
+def format_answer_html(text):
+    # The model's answers often come back as several newline-separated paragraphs, but raw
+    # newlines are invisible in HTML - wrap each one in its own <p> so structure survives.
+    paragraphs = [html.escape(p.strip()) for p in text.split("\n") if p.strip()]
+    return "".join(f"<p>{p}</p>" for p in paragraphs)
+
+
 def build_context_brief():
     guardrail_line = (
         f"The same test's volume guardrail was breached: unit volume dropped "
@@ -599,9 +610,9 @@ if ask_clicked and question:
                 else:
                     final_answer = FRIENDLY_FALLBACK
 
-                st.markdown(f'<div class="chat-answer">{final_answer}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="chat-answer">{format_answer_html(final_answer)}</div>', unsafe_allow_html=True)
             except Exception:
-                st.markdown(f'<div class="chat-answer">{FRIENDLY_FALLBACK}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="chat-answer">{format_answer_html(FRIENDLY_FALLBACK)}</div>', unsafe_allow_html=True)
 
 # ---- how this was built -------------------------------------------------------
 
