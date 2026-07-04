@@ -205,12 +205,14 @@ else:
 
 # ---- the problem and the data ----------------------------------------------
 
-section("The data behind this", "Built on real transaction history, not a toy dataset")
+section("The data behind this", "A realistic simulation, built to be tested against the truth")
 st.markdown(
-    "Meridian Goods runs 20 stores and sells 100 products, every day, for two years straight. "
-    "Everything on this page, every chart and every number, comes from that history: close to "
-    "1.5 million individual daily sales records. Here is a small sample of what the raw data "
-    "actually looks like."
+    "Meridian Goods is a simulated retailer: 20 stores selling 100 products, every day, for two "
+    "years straight. Everything on this page, every chart and every number, comes from that "
+    "history: close to 1.5 million individual daily sales records. It was built as a simulation "
+    "on purpose, because when the true demand and price sensitivity are known, every model here "
+    "can be graded against the real answer, something live store data never allows. Here is a "
+    "small sample of what the raw data actually looks like."
 )
 sample = con.execute(
     "SELECT date, store_name, category, brand_tier, units_sold, price, revenue, margin "
@@ -458,8 +460,10 @@ anything ships.
 It was built by {BUILDER_NAME}. If asked who built this, who made it, or how to get in touch,
 always answer with that name and mention {CONTACT_EMAIL} for more details.
 
-Scale of the data: close to 1.5 million daily transaction records across 20 stores and 100
-products over two years.
+Scale of the data: close to 1.5 million daily records across 20 stores and 100 products over two
+years. The data is a realistic simulation, built on purpose, because when the true demand and
+price sensitivity are known ahead of time, every model in this project can be graded against the
+real answer, something live store data never allows.
 
 Tech stack: Python, pandas and numpy for data handling, LightGBM and statsmodels for the
 statistical models, DuckDB for the underlying data queries, Streamlit for this website, Plotly
@@ -495,8 +499,24 @@ something about it instead.
 """
 
 
+WHY_HIRE_ANSWER = """You should hire Krish Shah for a pricing, revenue-management, or applied-data-science role because he turns messy data into pricing decisions a business can trust and act on.
+Krish built PriceIQ, an end-to-end pricing and demand decision-intelligence platform, to demonstrate that he can own the full loop from raw data to a defensible dollar recommendation, which is the core of what a pricing or revenue-management team does every day.
+Here is how the project maps to these roles:
+Pricing and revenue management. The entire project is denominated in margin rather than surface-level metrics. Krish estimates price elasticity, optimizes prices under realistic merchandising constraints such as competitor guardrails, price-ladder ordering, and psychological price endings, and quantifies the margin impact with an honest uncertainty range rather than a single false-precision figure. He also handled one of the harder problems in pricing analytics, endogeneity. He recognized that historical prices are biased because managers tend to cut prices on already-slow products, which distorts naive elasticity estimates. By isolating cost-driven price changes as clean signal, he reduced his estimation error substantially and recovered the true price sensitivity.
+Data science and experimentation. Krish validates before he claims. Before trusting his own optimizer, he designed a store-randomized A/B test with matched pairs and CUPED variance reduction to make a small sample statistically valid. He reports lift with confidence intervals and tracks guardrail metrics, on the principle that a margin gain that reduces store traffic can be a hidden loss. This reflects the experimentation rigor these teams rely on.
+Analyst fundamentals. The project sits on a clean SQL pipeline over 1.5 million rows, honest rolling-origin backtesting that avoids data leakage, and a forecasting model that improved on its baseline by roughly 20 percent across every test fold. The results are presented in a dashboard designed for an executive audience to use directly.
+Krish also uses AI the way many companies aim to deploy it, as a productivity layer for natural-language queries that is deliberately kept separate from the numbers, so the pricing math stays deterministic and auditable.
+The consistent theme across the project is judgment: baseline discipline, causal awareness, a habit of validating before claiming, and a focus on translating analysis into the dollars a business cares about.
+If you would like to discuss how he could bring this approach to your team, you can reach him at krishshah712@gmail.com."""
+
 ROUTER_INSTRUCTION_TEMPLATE = """
 {context_brief}
+
+SPECIAL CASE: if the question asks why someone should hire the person who built this, why Krish
+should be hired, what makes him a good fit, or anything closely equivalent, reply with exactly
+this, unmodified, right after the ANSWER: prefix:
+
+{why_hire_answer}
 
 You can also query one database view called v_daily_sales for questions that need a specific
 live number not already covered above (a particular store, category, or month, for example).
@@ -541,7 +561,9 @@ if ask_clicked and question:
                 from google.genai import types as genai_types
 
                 client = google_genai.Client(api_key=GEMINI_API_KEY)
-                router_instruction = ROUTER_INSTRUCTION_TEMPLATE.format(context_brief=build_context_brief())
+                router_instruction = ROUTER_INSTRUCTION_TEMPLATE.format(
+                    context_brief=build_context_brief(), why_hire_answer=WHY_HIRE_ANSWER
+                )
 
                 first = client.models.generate_content(
                     model=GEMINI_MODEL,
