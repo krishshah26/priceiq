@@ -1,0 +1,4 @@
+approach,MAE_vs_true,mean_signed_error
+naive (all weeks),1.9020677428542785,1.7544831186457301
+clean (cost_driven only),1.3755275780034792,0.3934853343604513
+shrunk (clean + tier pooling),0.9515067151010235,0.3471150294157587

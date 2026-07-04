@@ -1,0 +1,14 @@
+{
+  "raw_diff": 5922.485255549855,
+  "raw_ci_lo": -1597.4028797218934,
+  "raw_ci_hi": 13442.373390821602,
+  "raw_p": 0.11532946554202235,
+  "cuped_diff": 5494.289114892643,
+  "cuped_ci_lo": 4581.12896269326,
+  "cuped_ci_hi": 6407.449267092025,
+  "cuped_p": 2.339421717872503e-10,
+  "variance_reduction": 0.9852671331416193,
+  "units_pct_change": -0.2950226464123954,
+  "guardrail_threshold": -0.15,
+  "guardrail_breached": true
+}

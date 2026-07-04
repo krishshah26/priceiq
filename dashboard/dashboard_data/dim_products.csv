@@ -1,0 +1,101 @@
+sku_id,sku_name,category,brand_tier,base_cost,base_price
+1,SKU 0001,Dairy,Good,5.69,7.23
+2,SKU 0002,Frozen,Good,3.3,4.17
+3,SKU 0003,Personal Care,Better,2.73,4.36
+4,SKU 0004,Frozen,Better,1.61,2.39
+5,SKU 0005,Bakery,Better,1.1,1.82
+6,SKU 0006,Bakery,Better,2.24,3.42
+7,SKU 0007,Dairy,Better,2.91,4.32
+8,SKU 0008,Beverages,Better,8.68,14.58
+9,SKU 0009,Frozen,Good,3.25,4.17
+10,SKU 0010,Household,Good,5.42,7.08
+11,SKU 0011,Frozen,Better,2.23,3.32
+12,SKU 0012,Dairy,Better,1.48,2.19
+13,SKU 0013,Produce,Better,1.68,2.44
+14,SKU 0014,Household,Better,1.94,2.84
+15,SKU 0015,Produce,Better,10.77,16.09
+16,SKU 0016,Bakery,Better,1.84,2.69
+17,SKU 0017,Household,Better,4.97,7.94
+18,SKU 0018,Personal Care,Good,1.75,2.43
+19,SKU 0019,Dairy,Good,5.25,6.98
+20,SKU 0020,Bakery,Better,3.78,5.78
+21,SKU 0021,Frozen,Good,2.73,3.69
+22,SKU 0022,Bakery,Better,2.93,4.89
+23,SKU 0023,Household,Best,2.03,4.14
+24,SKU 0024,Dairy,Good,3.93,4.95
+25,SKU 0025,Personal Care,Good,2.29,2.95
+26,SKU 0026,Produce,Good,1.44,1.87
+27,SKU 0027,Household,Good,1.4,1.82
+28,SKU 0028,Dairy,Better,3.33,5.3
+29,SKU 0029,Beverages,Better,7.75,12.04
+30,SKU 0030,Bakery,Better,3.31,4.84
+31,SKU 0031,Personal Care,Better,2.8,4.32
+32,SKU 0032,Household,Better,3.57,5.64
+33,SKU 0033,Dairy,Best,6.58,11.45
+34,SKU 0034,Personal Care,Good,3.43,4.86
+35,SKU 0035,Bakery,Good,2.35,2.96
+36,SKU 0036,Dairy,Good,5.83,8.37
+37,SKU 0037,Dairy,Better,3.89,5.74
+38,SKU 0038,Beverages,Better,7.55,12.54
+39,SKU 0039,Beverages,Good,3.35,4.79
+40,SKU 0040,Personal Care,Better,1.44,2.44
+41,SKU 0041,Produce,Good,1.32,1.86
+42,SKU 0042,Produce,Better,8.09,13.31
+43,SKU 0043,Frozen,Better,8.45,13.61
+44,SKU 0044,Frozen,Good,2.7,3.8
+45,SKU 0045,Personal Care,Good,2.39,3.05
+46,SKU 0046,Snacks,Better,7.22,11.44
+47,SKU 0047,Beverages,Good,1.55,2.1
+48,SKU 0048,Household,Good,1.76,2.5
+49,SKU 0049,Household,Good,4.42,5.93
+50,SKU 0050,Snacks,Best,2.37,4.39
+51,SKU 0051,Household,Best,2.99,5.85
+52,SKU 0052,Beverages,Better,2.72,4.13
+53,SKU 0053,Dairy,Good,3.68,4.7
+54,SKU 0054,Produce,Best,6.99,13.22
+55,SKU 0055,Frozen,Better,3.17,4.93
+56,SKU 0056,Personal Care,Better,4.42,6.67
+57,SKU 0057,Personal Care,Better,0.88,1.36
+58,SKU 0058,Household,Good,2.92,3.86
+59,SKU 0059,Snacks,Good,1.81,2.38
+60,SKU 0060,Dairy,Best,1.45,2.69
+61,SKU 0061,Dairy,Better,1.77,2.87
+62,SKU 0062,Beverages,Good,2.46,3.22
+63,SKU 0063,Personal Care,Good,5.2,7.49
+64,SKU 0064,Household,Better,1.36,2.28
+65,SKU 0065,Snacks,Good,3.06,4.12
+66,SKU 0066,Frozen,Best,2.25,4.12
+67,SKU 0067,Dairy,Better,2.47,3.91
+68,SKU 0068,Frozen,Better,5.48,9.11
+69,SKU 0069,Frozen,Better,4.15,6.69
+70,SKU 0070,Produce,Better,6.7,11.06
+71,SKU 0071,Bakery,Better,2.74,4.34
+72,SKU 0072,Dairy,Better,1.98,3.18
+73,SKU 0073,Produce,Good,2.63,3.44
+74,SKU 0074,Personal Care,Better,3.47,5.67
+75,SKU 0075,Produce,Good,3.34,4.31
+76,SKU 0076,Bakery,Better,1.57,2.55
+77,SKU 0077,Frozen,Good,3.17,4.51
+78,SKU 0078,Produce,Good,3.45,4.4
+79,SKU 0079,Dairy,Good,13.61,18.68
+80,SKU 0080,Frozen,Better,9.26,13.65
+81,SKU 0081,Household,Good,1.8,2.51
+82,SKU 0082,Produce,Best,2.53,4.39
+83,SKU 0083,Dairy,Better,1.25,2.1
+84,SKU 0084,Bakery,Good,2.11,2.7
+85,SKU 0085,Personal Care,Better,3.63,6.13
+86,SKU 0086,Bakery,Good,6.19,8.73
+87,SKU 0087,Beverages,Best,1.94,3.76
+88,SKU 0088,Beverages,Better,2.03,3.34
+89,SKU 0089,Dairy,Better,0.83,1.37
+90,SKU 0090,Frozen,Good,2.72,3.91
+91,SKU 0091,Bakery,Better,1.59,2.41
+92,SKU 0092,Personal Care,Better,2.19,3.5
+93,SKU 0093,Frozen,Best,1.78,3.09
+94,SKU 0094,Dairy,Better,2.84,4.56
+95,SKU 0095,Produce,Better,1.05,1.57
+96,SKU 0096,Frozen,Good,1.25,1.7
+97,SKU 0097,Personal Care,Good,10.78,14.71
+98,SKU 0098,Produce,Better,1.39,2.18
+99,SKU 0099,Beverages,Better,1.56,2.47
+100,SKU 0100,Produce,Good,9.04,12.68

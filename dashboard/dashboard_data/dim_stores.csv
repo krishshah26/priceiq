@@ -1,0 +1,21 @@
+store_id,store_name,region,store_size,traffic_multiplier
+1,Store 001,Southwest,Large,1.4589773623837479
+2,Store 002,Midwest,Medium,0.9029036495365004
+3,Store 003,Northeast,Large,1.8019083701307892
+4,Store 004,Southwest,Medium,0.9770871568099039
+5,Store 005,West,Small,0.6564399119763328
+6,Store 006,West,Large,1.4228260580277872
+7,Store 007,Northeast,Large,1.624680995325225
+8,Store 008,Southeast,Large,1.5845203096394447
+9,Store 009,West,Small,0.7447065340757665
+10,Store 010,Southwest,Medium,1.066756941754424
+11,Store 011,Midwest,Medium,1.3788463070448247
+12,Store 012,Southwest,Large,1.4112881313170165
+13,Store 013,Southwest,Medium,0.9260413329095001
+14,Store 014,Southeast,Large,1.327635046457068
+15,Store 015,Southwest,Medium,1.0968000703272096
+16,Store 016,Southeast,Small,0.8291708113386635
+17,Store 017,Southeast,Medium,0.9830531229389385
+18,Store 018,West,Small,0.6171159079149814
+19,Store 019,West,Large,1.3255042137811859
+20,Store 020,Northeast,Medium,1.1025094703335867
